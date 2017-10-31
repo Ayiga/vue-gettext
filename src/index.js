@@ -46,8 +46,7 @@ export default class VueGettext {
 
     const finalOptions = Object.assign({},
       defaultConfig,
-      options,
-    )
+      options)
 
     const available = finalOptions.availableLanguages || defaultConfig.availableLanguages
     const language = finalOptions.language || finalOptions.defaultLanguage || defaultConfig.defaultLanguage
