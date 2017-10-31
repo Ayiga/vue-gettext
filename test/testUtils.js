@@ -5,10 +5,12 @@ let uninstallPlugin = function (Vue, Plugin) {
     // The way to do this has changed over time, see:
     // https://github.com/vuejs/vue/commit/049f31#diff-df137982016aef85f3594216a4c9a295
     Vue._installedPlugins = []
-  } else {
+  }
+
+  if (typeof Plugin.install.installed !== 'undefined' && Plugin.install.installed) {
     // Could also be `._installed` for some Vue versions
     // https://github.com/vuejs/vue/commit/b4dd0b#diff-df137982016aef85f3594216a4c9a295
-    Plugin.installed = false
+    Plugin.install.installed = false
   }
 }
 

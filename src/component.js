@@ -1,6 +1,4 @@
-import translate from './translate'
 import uuid from './uuid'
-
 
 /**
  * Translate content according to the current language.
@@ -67,12 +65,12 @@ export default {
 
   computed: {
     translation: function () {
-      let translation = translate.getTranslation(
+      let translation = this.$gettextInst.getTranslation(
         this.msgid,
         this.translateN,
         this.translateContext,
         this.isPlural ? this.translatePlural : null,
-        this.$language.current
+        this.$currentLanguage
       )
 
       let context = this.$parent
