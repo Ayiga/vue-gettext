@@ -53,7 +53,6 @@ if (typeof Object.assign !== 'function') {
 var plurals = {
 
   getTranslationIndex: function (languageCode, n) {
-    console.log('<<< HERE getTranslationIndex', languageCode, n);
     n = parseInt(n);
     n = typeof n === 'number' && isNaN(n) ? 1 : n;  // Fallback to singular.
 
