@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import enGBTranslations from '../locale/en_GB/LC_MESSAGES/app.po'
 export default {
   data: () => ({
     n: 2,
@@ -36,6 +37,9 @@ export default {
       msg = this.$gettextInterpolate(msg, {n: n})
       return window.alert(msg)
     },
+  },
+  mounted () {
+    console.log('<<< HERE', enGBTranslations)
   },
 }
 </script>

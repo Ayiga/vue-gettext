@@ -20,4 +20,20 @@ export default function extend (Vue) {
   Vue.prototype.$gettextInterpolate = function (msgid, context) {
     return this.$gettextInst.interpolate(msgid, context)
   }
+
+  Vue.prototype.$gettextAddTranslations = function (nextTranslations) {
+    this._gettextRoot._gettext.translations = Object.assign(
+      {},
+      this._gettextRoot._gettext.translations,
+      nextTranslations
+    )
+  }
+
+  Vue.prototype.$gettextAddLanguages = function (nextLanguages) {
+    this._gettextRoot._gettext.availableLanguages = Object.assign(
+      {},
+      this._gettextRoot._gettext.availableLanguages,
+      nextLanguages
+    )
+  }
 }

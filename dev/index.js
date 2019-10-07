@@ -3,7 +3,7 @@ import './styles/global.css'
 import Vue from 'vue'
 
 import VueGettext from '../src/index'
-import translations from './translations.json'
+// import translations from './translations.json'
 
 import AlertComponent from './components/alert'
 import CustomTags from './components/customTags'
@@ -23,7 +23,11 @@ const gettext = new VueGettext({
     it_IT: 'Italiano',
   },
   defaultLanguage: 'en_GB',
-  translations: translations,
+  translations: {
+    en_GB: require('./locale/en_GB/LC_MESSAGES/app.po'),
+    fr_FR: require('./locale/fr_FR/LC_MESSAGES/app.po'),
+    it_IT: require('./locale/it_IT/LC_MESSAGES/app.po'),
+  },
 })
 
 export let vm = new Vue({

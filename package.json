@@ -1,6 +1,6 @@
 {
   "name": "vue-gettext",
-  "version": "2.0.25",
+  "version": "2.1.0",
   "description": "Translate your Vue.js applications with gettext",
   "main": "dist/vue-gettext.js",
   "author": "Marc Hertzog",
@@ -49,6 +49,8 @@
     "karma-webpack": "^1.8.0",
     "mocha": "^3.1.2",
     "moment": "^2.16.0",
+    "po-loader": "^0.5.0",
+    "po2json": "^1.0.0-alpha",
     "postcss-cssnext": "^2.8.0",
     "postcss-import": "^8.1.3",
     "postcss-loader": "^1.1.0",

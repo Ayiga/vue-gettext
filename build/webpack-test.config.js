@@ -68,6 +68,10 @@ var webpackConfig = {
         test: /\.vue$/,
         loader: 'vue',
       },
+      {
+        test: /\.po$/,
+        loader: 'json!po',
+      },
     ],
   },
 
