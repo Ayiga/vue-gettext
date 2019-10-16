@@ -76,12 +76,6 @@ export default {
       case 'tr':  // Turkish
       case 'uz':  // Uzbek
       case 'wa':  // Walloon
-      /* eslint-disable */
-      /* Disable "Duplicate case label" because there are 2 forms of Chinese plurals */
-      case 'zh':  // Chinese
-      /* eslint-enable */
-        // 2 forms
-        return n > 1 ? 1 : 0
       case 'lv':  // Latvian
         // 3 forms
         return (n % 10 === 1 && n % 100 !== 11 ? 0 : n !== 0 ? 1 : 2)
