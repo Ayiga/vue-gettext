@@ -666,12 +666,12 @@ VueGettext.prototype.getTranslation = function getTranslation (msgid, n, context
 
   var portion = translated[plurals.getTranslationIndex(language, n) + 1];
 
-  if (portion instanceof Array) {
-    // Return the First element?
-    return portion[0]
+
+  if (typeof portion === 'string') {
+    return portion
   }
 
-  return portion
+  return portion[0]
 };
 
 /**
