@@ -17,8 +17,8 @@ export default {
     // two-letter codes for many languages, and three-letter codes for
     // more rarely used languages.
     // https://www.gnu.org/software/gettext/manual/html_node/Language-Codes.html#Language-Codes
-    if (languageCode.length > 2 && languageCode !== 'pt_BR') {
-      languageCode = languageCode.split('_')[0]
+    if (languageCode.length > 2 && languageCode !== 'pt_BR' && languageCode !== 'pt-BR') {
+      languageCode = languageCode.split(/_|-/g)[0]
     }
 
     switch (languageCode) {
@@ -71,6 +71,7 @@ export default {
       case 'mi':  // Maori
       case 'oc':  // Occitan
       case 'pt_BR':  // Brazilian Portuguese
+      case 'pt-BR':  // Brazilian Portuguese
       case 'tg':  // Tajik
       case 'ti':  // Tigrinya
       case 'tr':  // Turkish
