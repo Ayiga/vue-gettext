@@ -150,7 +150,14 @@ export default class VueGettext {
       translated = [translated['']]
     }
 
-    return translated[plurals.getTranslationIndex(language, n) + 1]
+    const portion = translated[plurals.getTranslationIndex(language, n) + 1]
+
+    if (portion instanceof Array) {
+      // Return the First element?
+      return portion[0]
+    }
+
+    return portion
   }
 
   /**

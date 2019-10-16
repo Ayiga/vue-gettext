@@ -669,7 +669,14 @@ VueGettext.prototype.getTranslation = function getTranslation (msgid, n, context
     translated = [translated['']];
   }
 
-  return translated[plurals.getTranslationIndex(language, n) + 1]
+  var portion = translated[plurals.getTranslationIndex(language, n) + 1];
+
+  if (portion instanceof Array) {
+    // Return the First element?
+    return portion[0]
+  }
+
+  return portion
 };
 
 /**
